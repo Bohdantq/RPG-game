@@ -1,0 +1,90 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --bg-main: #201120;
+   --bg-box: #81ddff;
+   --bg-red: #8d0404;
+   --color1: #2c501a;
+   --color2: #f0f0f0;
+}
+
+#controls,
+#stats {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 10px;
+}
+
+#stats,
+#controls,
+#monsterStats {
+   border: 2px solid var(--bg-main);
+}
+
+button {
+   cursor: pointer;
+   background: linear-gradient(90deg, #56c420, var(--color1));
+   color: var(--color2);
+   padding: 6px 12px;
+   border-color: var(--bg-box);
+   border-radius: 5px 10px;
+   transition: background .3s ease, transform .2s ease;
+
+   &:hover {
+      transform: scale(1.2);
+      background: linear-gradient(var(--color1), #56c420);
+   }
+
+   &:active {
+      border-radius: 10px 5px;
+      transform: scale(1);
+   }
+}
+
+body {
+   background-color: var(--bg-main);
+   color: var(--color1);
+   font-family: Combo, sans-serif;
+   font-weight: 400;
+   font-size: 18px;
+}
+
+#game {
+   max-width: 600px;
+   width: 100%;
+   background-color: var(--bg-box);
+   padding: 15px;
+   margin: 40px auto;
+}
+
+#controls {
+   border-top: none;
+}
+
+#monsterStats {
+   display: none;
+   align-items: center;
+   justify-content: center;
+   gap: 10rem;
+   background-color: var(--bg-red);
+   color: var(--color2);
+   border-top: none;
+   padding: 5px;
+}
+
+#text {
+   background-color: var(--bg-main);
+   color: var(--color2);
+   padding: 15px;
+}
